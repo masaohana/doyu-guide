@@ -416,13 +416,18 @@ export default function Home() {
       </section>
 
       <section className="deep-dive-teaser section-shell">
-        <div className="deep-dive-label">もう一歩、深く。</div>
         <div className="deep-dive-copy">
-          <p className="section-number">DEEP DIVE GUIDE</p>
-          <h2>
-            「何をする会？」から、
-            <br />
-            <span>「なぜ、そうする？」へ。</span>
+          <div className="deep-dive-kicker">
+            <p className="section-number">DEEP DIVE GUIDE</p>
+            <span className="deep-dive-label">もう一歩、深く。</span>
+          </div>
+          <h2 className="deep-dive-heading">
+            <span className="deep-dive-heading-line">
+              「何をする会？」から、
+            </span>
+            <span className="deep-dive-heading-line deep-dive-heading-accent">
+              「なぜ、そうする？」へ。
+            </span>
           </h2>
           <p>
             理念の成り立ち、例会での学び方、人を生かす経営、組織づくり。

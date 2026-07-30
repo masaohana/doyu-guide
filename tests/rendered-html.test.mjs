@@ -46,6 +46,21 @@ test("renders the Doyukai introduction page", async () => {
   assert.match(html, /会員一人ひとりが、/);
   assert.match(html, /class="phrase">先生であり、/);
   assert.match(html, /class="phrase">生徒である。/);
+  assert.match(
+    html,
+    /class="deep-dive-heading-line">「何をする会？」から、<\/span>/,
+  );
+  assert.match(
+    html,
+    /class="deep-dive-heading-line deep-dive-heading-accent">「なぜ、そうする？」へ。<\/span>/,
+  );
+
+  const deepDiveHeading = html.match(
+    /<h2 class="deep-dive-heading">([\s\S]*?)<\/h2>/,
+  );
+  assert.ok(deepDiveHeading);
+  assert.doesNotMatch(deepDiveHeading[1], /<br\s*\/?>/);
+
   assert.match(html, /中同協公式サイト/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/);
 });
@@ -103,6 +118,15 @@ test("renders the detailed guide with progressive learning sections", async () =
   for (const [, heading] of guideHeadings) {
     assert.doesNotMatch(heading, /<br\s*\/?>/);
   }
+
+  const triad = html.match(
+    /<div class="management-triad">([\s\S]*?)<\/div><div class="management-flow">/,
+  );
+  assert.ok(triad);
+  assert.ok(
+    triad[1].indexOf('class="triad-center"') <
+      triad[1].indexOf("<article>"),
+  );
 
   assert.match(html, /1957/);
   assert.match(html, /1990/);

@@ -1794,15 +1794,15 @@ footer {
   position: relative;
   display: grid;
   min-height: 590px;
-  grid-template-columns: 0.75fr 1.5fr 0.75fr;
+  grid-template-columns: minmax(0, 1fr) 104px;
   align-items: center;
-  gap: 50px;
+  gap: 72px;
   border: 3px solid var(--ink);
   border-radius: 26px;
   background: #e4e8ff;
   box-shadow: 12px 12px 0 var(--ink);
   margin-bottom: 140px;
-  padding: 70px;
+  padding: 72px 78px;
 }
 
 .deep-dive-teaser::before {
@@ -1817,23 +1817,47 @@ footer {
   content: "";
 }
 
+.deep-dive-kicker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.deep-dive-kicker .section-number {
+  margin: 0;
+}
+
 .deep-dive-label {
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 950;
-  letter-spacing: -0.08em;
-  line-height: 1.2;
-  writing-mode: vertical-rl;
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  padding: 5px 12px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 .deep-dive-copy h2 {
   margin: 0;
-  font-size: clamp(2.4rem, 4.5vw, 4.7rem);
+  font-size: clamp(2.6rem, 4.35vw, 3.7rem);
   font-weight: 950;
-  letter-spacing: -0.075em;
-  line-height: 1.25;
+  letter-spacing: -0.045em;
+  line-height: 1.24;
 }
 
-.deep-dive-copy h2 span {
+.deep-dive-heading-line {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.deep-dive-copy h2 .deep-dive-heading-accent {
   color: var(--blue);
 }
 
@@ -2413,16 +2437,17 @@ footer {
 }
 
 .management-triad {
-  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 90px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 28px 24px;
+  margin-top: 72px;
 }
 
 .management-triad article {
   display: flex;
-  min-height: 330px;
+  min-height: 0;
+  aspect-ratio: 1;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--white);
@@ -2464,21 +2489,20 @@ footer {
 }
 
 .triad-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: grid;
-  width: 116px;
-  height: 116px;
-  place-items: center;
+  display: inline-flex;
+  width: max-content;
+  min-height: 50px;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-self: center;
   border: 3px solid var(--ink);
-  border-radius: 50%;
+  border-radius: 999px;
   background: var(--yellow);
   box-shadow: 5px 5px 0 var(--ink);
   color: var(--ink);
+  padding: 9px 28px;
   font-size: 0.85rem;
   font-weight: 950;
-  transform: translate(-50%, -50%);
 }
 
 .management-flow {
@@ -2662,8 +2686,13 @@ footer {
 
 @media (max-width: 1020px) {
   .deep-dive-teaser {
-    grid-template-columns: 0.35fr 1.4fr 0.5fr;
+    grid-template-columns: minmax(0, 1fr) 90px;
+    gap: 48px;
     padding: 50px;
+  }
+
+  .deep-dive-copy h2 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
   }
 
   .guide-hero {
@@ -2694,8 +2723,8 @@ footer {
   }
 
   .management-triad article {
-    min-height: 280px;
-    padding: 34px;
+    min-height: 0;
+    padding: 32px;
   }
 
   .management-flow {
@@ -2722,6 +2751,24 @@ footer {
   }
 }
 
+@media (max-width: 900px) {
+  .management-triad {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 56px;
+  }
+
+  .management-triad article {
+    width: min(300px, 100%);
+    margin-inline: auto;
+  }
+
+  .triad-center {
+    grid-column: auto;
+    margin-bottom: 8px;
+  }
+}
+
 @media (max-width: 700px) {
   .detail-banner {
     box-shadow: 4px 4px 0 var(--ink);
@@ -2739,8 +2786,16 @@ footer {
     padding: 76px 22px 40px;
   }
 
-  .deep-dive-label {
-    writing-mode: horizontal-tb;
+  .deep-dive-kicker {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .deep-dive-copy h2 {
+    font-size: clamp(1.25rem, 6.4vw, 2.45rem);
+    letter-spacing: -0.035em;
   }
 
   .deep-dive-topics {
@@ -2914,13 +2969,14 @@ footer {
   }
 
   .management-triad article {
-    width: 270px;
-    min-height: 270px;
+    width: min(270px, 100%);
+    min-height: 0;
     margin-inline: auto;
   }
 
   .triad-center {
-    display: none;
+    display: inline-flex;
+    grid-column: auto;
   }
 
   .management-flow {

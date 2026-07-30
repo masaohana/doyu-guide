@@ -369,6 +369,7 @@ export default function GuidePage() {
           </div>
 
           <div className="management-triad">
+            <div className="triad-center">経営理念</div>
             <article>
               <small>01</small>
               <h3>人間性</h3>
@@ -384,7 +385,6 @@ export default function GuidePage() {
               <h3>科学性</h3>
               <p>利益と事実に向き合い、計画して実践する。</p>
             </article>
-            <div className="triad-center">経営理念</div>
           </div>
 
           <div className="management-flow">
