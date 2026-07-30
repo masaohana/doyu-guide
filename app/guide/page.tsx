@@ -198,10 +198,12 @@ export default function GuidePage() {
         <div className="guide-section-head">
           <div>
             <p className="section-number">01 / 理念の3層</p>
-            <h2>
-              理念は、
-              <br />
-              <span>3つの問い</span>でできている。
+            <h2 className="guide-heading">
+              <span className="guide-heading-line">理念は、</span>
+              <span className="guide-heading-line guide-heading-accent">
+                3つの問いで
+              </span>
+              <span className="guide-heading-line">できている。</span>
             </h2>
           </div>
           <p>
@@ -257,10 +259,13 @@ export default function GuidePage() {
           <div className="guide-section-head light-head">
             <div>
               <p className="section-number">02 / 同友会運動とは</p>
-              <h2>
-                今日の行事だけでなく、
-                <br />
-                <span>長い目で未来を変える。</span>
+              <h2 className="guide-heading guide-heading--wide">
+                <span className="guide-heading-line">
+                  今日の行事だけでなく、
+                </span>
+                <span className="guide-heading-line guide-heading-accent">
+                  長い目で未来を変える。
+                </span>
               </h2>
             </div>
             <p>
@@ -306,10 +311,11 @@ export default function GuidePage() {
         <div className="guide-section-head">
           <div>
             <p className="section-number">03 / 例会の学び</p>
-            <h2>
-              話を聴く。
-              <br />
-              <span>自分に重ねる。</span>
+            <h2 className="guide-heading">
+              <span className="guide-heading-line">話を聴く。</span>
+              <span className="guide-heading-line guide-heading-accent">
+                自分に重ねる。
+              </span>
             </h2>
           </div>
           <p>
@@ -350,10 +356,11 @@ export default function GuidePage() {
           <div className="guide-section-head light-head">
             <div>
               <p className="section-number">04 / 人を生かす経営</p>
-              <h2>
-                人を大切にする。
-                <br />
-                <span>だから、経営を磨く。</span>
+              <h2 className="guide-heading">
+                <span className="guide-heading-line">人を大切にする。</span>
+                <span className="guide-heading-line guide-heading-accent">
+                  だから、経営を磨く。
+                </span>
               </h2>
             </div>
             <p>
@@ -412,10 +419,11 @@ export default function GuidePage() {
         <div className="guide-section-head">
           <div>
             <p className="section-number">05 / 組織づくり</p>
-            <h2>
-              学びの場は、
-              <br />
-              <span>みんなでつくる。</span>
+            <h2 className="guide-heading">
+              <span className="guide-heading-line">学びの場は、</span>
+              <span className="guide-heading-line guide-heading-accent">
+                みんなでつくる。
+              </span>
             </h2>
           </div>
           <p>
@@ -439,10 +447,13 @@ export default function GuidePage() {
           <div className="guide-section-head light-head">
             <div>
               <p className="section-number">06 / 理念の歩み</p>
-              <h2>
-                理念は、歴史の中で
-                <br />
-                <span>磨かれてきた。</span>
+              <h2 className="guide-heading">
+                <span className="guide-heading-line">
+                  理念は、歴史の中で
+                </span>
+                <span className="guide-heading-line guide-heading-accent">
+                  磨かれてきた。
+                </span>
               </h2>
             </div>
             <p>
@@ -467,10 +478,12 @@ export default function GuidePage() {
       <section className="guide-final section-shell">
         <div>
           <p className="section-number">READ, THINK, TRY.</p>
-          <h2>
-            わかった、で終わらせない。
-            <br />
-            <span>自社ならどうする？</span>
+          <h2 className="guide-heading">
+            <span className="guide-heading-line">わかった、</span>
+            <span className="guide-heading-line">で終わらせない。</span>
+            <span className="guide-heading-line guide-heading-accent">
+              自社ならどうする？
+            </span>
           </h2>
           <p>
             同友会の学びは、自分の会社に問いを持ち帰るところから始まります。

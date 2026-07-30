@@ -1889,6 +1889,14 @@ footer {
   background: var(--cream);
 }
 
+.guide-page :where(p, li, h3, h4, strong) {
+  overflow-wrap: normal;
+  word-break: normal;
+  word-break: auto-phrase;
+  line-break: strict;
+  text-wrap: pretty;
+}
+
 .guide-hero {
   display: grid;
   min-height: 790px;
@@ -2065,13 +2073,20 @@ footer {
 
 .guide-section-head h2 {
   margin: 0;
-  font-size: clamp(2.6rem, 5vw, 5.2rem);
+  font-size: clamp(2.25rem, 3.85vw, 3.15rem);
   font-weight: 950;
-  letter-spacing: -0.08em;
-  line-height: 1.22;
+  letter-spacing: -0.045em;
+  line-height: 1.24;
 }
 
-.guide-section-head h2 span {
+.guide-heading-line {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.guide-section-head h2 .guide-heading-accent {
   color: var(--blue);
 }
 
@@ -2188,7 +2203,7 @@ footer {
   padding-block: 140px;
 }
 
-.light-head h2 span {
+.light-head h2 .guide-heading-accent {
   color: var(--yellow);
 }
 
@@ -2619,13 +2634,13 @@ footer {
 
 .guide-final h2 {
   margin: 0;
-  font-size: clamp(2.5rem, 5vw, 5.2rem);
+  font-size: clamp(2.25rem, 3.85vw, 3.15rem);
   font-weight: 950;
-  letter-spacing: -0.08em;
-  line-height: 1.25;
+  letter-spacing: -0.045em;
+  line-height: 1.24;
 }
 
-.guide-final h2 span {
+.guide-final h2 .guide-heading-accent {
   color: var(--blue);
 }
 
@@ -2801,7 +2816,12 @@ footer {
 
   .guide-section-head h2,
   .guide-final h2 {
-    font-size: clamp(2.35rem, 11vw, 3.5rem);
+    font-size: clamp(1.6rem, 8.7vw, 3rem);
+  }
+
+  .guide-section-head h2.guide-heading--wide,
+  .guide-final h2.guide-heading--wide {
+    font-size: clamp(1.3rem, 7.15vw, 2.4rem);
   }
 
   .guide-section-head > p {

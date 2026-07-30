@@ -73,6 +73,37 @@ test("renders the detailed guide with progressive learning sections", async () =
   assert.match(html, /人を生かす経営/);
   assert.match(html, /組織づくり/);
   assert.match(html, /理念の歩み/);
+  assert.match(
+    html,
+    /class="guide-heading-line">理念は、<\/span>/,
+  );
+  assert.match(
+    html,
+    /class="guide-heading-line guide-heading-accent">3つの問いで<\/span>/,
+  );
+  assert.match(
+    html,
+    /class="guide-heading-line">できている。<\/span>/,
+  );
+  assert.match(
+    html,
+    /class="guide-heading-line">わかった、<\/span>/,
+  );
+  assert.match(
+    html,
+    /class="guide-heading-line">で終わらせない。<\/span>/,
+  );
+
+  const guideHeadings = [
+    ...html.matchAll(
+      /<h2 class="guide-heading(?: guide-heading--wide)?">([\s\S]*?)<\/h2>/g,
+    ),
+  ];
+  assert.equal(guideHeadings.length, 7);
+  for (const [, heading] of guideHeadings) {
+    assert.doesNotMatch(heading, /<br\s*\/?>/);
+  }
+
   assert.match(html, /1957/);
   assert.match(html, /1990/);
 });
