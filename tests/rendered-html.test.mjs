@@ -48,6 +48,10 @@ test("renders the Doyukai introduction page", async () => {
   assert.match(html, /class="phrase">生徒である。/);
   assert.match(
     html,
+    /href="\/guide" class="header-button"[^>]*>深掘りガイド/,
+  );
+  assert.match(
+    html,
     /class="deep-dive-heading-line">「何をする会？」から、<\/span>/,
   );
   assert.match(

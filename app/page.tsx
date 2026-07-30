@@ -105,9 +105,13 @@ export default function Home() {
           <Link href="/guide">深掘りガイド</Link>
           <a href="#faq">よくある疑問</a>
         </nav>
-        <a className="header-button" href="#next">
-          もっと知る <span aria-hidden="true">↘</span>
-        </a>
+        <Link
+          className="header-button"
+          href="/guide"
+          aria-label="深掘りガイドを開く"
+        >
+          深掘りガイド <span aria-hidden="true">→</span>
+        </Link>
       </header>
 
       <section className="hero" id="top">
