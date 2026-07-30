@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const purposes = [
   {
     number: "01",
@@ -100,6 +102,7 @@ export default function Home() {
           <a href="#about">同友会とは</a>
           <a href="#purpose">3つの目的</a>
           <a href="#activity">活動</a>
+          <Link href="/guide">深掘りガイド</Link>
           <a href="#faq">よくある疑問</a>
         </nav>
         <a className="header-button" href="#next">
@@ -222,6 +225,13 @@ export default function Home() {
               <strong>会社を変える実践</strong>までが、学びです。
             </p>
           </div>
+          <Link className="detail-banner" href="/guide">
+            <span>
+              <small>DEEP DIVE</small>
+              理念や活動を、もう少し詳しく
+            </span>
+            <b aria-hidden="true">→</b>
+          </Link>
         </div>
       </section>
 
@@ -404,6 +414,33 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="deep-dive-teaser section-shell">
+        <div className="deep-dive-label">もう一歩、深く。</div>
+        <div className="deep-dive-copy">
+          <p className="section-number">DEEP DIVE GUIDE</p>
+          <h2>
+            「何をする会？」から、
+            <br />
+            <span>「なぜ、そうする？」へ。</span>
+          </h2>
+          <p>
+            理念の成り立ち、例会での学び方、人を生かす経営、組織づくり。
+            <br />
+            同友会の考え方を、5つのテーマで掘り下げます。
+          </p>
+          <Link className="primary-button" href="/guide">
+            深掘りガイドを読む <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <div className="deep-dive-topics" aria-label="深掘りガイドのテーマ">
+          <span>理念</span>
+          <span>運動</span>
+          <span>例会</span>
+          <span>経営</span>
+          <span>歴史</span>
+        </div>
+      </section>
+
       <section className="next section-shell" id="next">
         <div className="next-sticker">NEXT!</div>
         <p className="section-number">ここまで読んだあなたへ</p>
@@ -434,6 +471,9 @@ export default function Home() {
           >
             公開行事を見てみる <span aria-hidden="true">→</span>
           </a>
+          <Link className="text-link" href="/guide">
+            もっと詳しく学ぶ <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </section>
 

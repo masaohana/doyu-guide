@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-async function render() {
+async function render(path = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", {
+    new Request(`http://localhost${path}`, {
       headers: { accept: "text/html" },
     }),
     {
@@ -52,4 +52,32 @@ test("keeps official external links safe and explicit", async () => {
   assert.match(html, /target="_blank"/);
   assert.match(html, /rel="noreferrer"/);
   assert.match(html, /非公式な入門ページ/);
+});
+
+test("renders the detailed guide with progressive learning sections", async () => {
+  const response = await render("/guide");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /深掘りガイド｜DOYU!/);
+  assert.match(html, /理念の3層/);
+  assert.match(html, /同友会運動とは/);
+  assert.match(html, /例会の学び/);
+  assert.match(html, /人を生かす経営/);
+  assert.match(html, /組織づくり/);
+  assert.match(html, /理念の歩み/);
+  assert.match(html, /1957/);
+  assert.match(html, /1990/);
+});
+
+test("includes a site-specific social preview image", async () => {
+  const response = await render();
+  const html = await response.text();
+
+  assert.match(html, /property="og:image"/);
+  assert.match(
+    html,
+    /https:\/\/doyu-guide\.masao457193\.chatgpt\.site\/og\.png/,
+  );
+  assert.match(html, /summary_large_image/);
 });
