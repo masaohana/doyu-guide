@@ -77,7 +77,7 @@ test("includes a site-specific social preview image", async () => {
   assert.match(html, /property="og:image"/);
   assert.match(
     html,
-    /https:\/\/doyu-guide\.masao457193\.chatgpt\.site\/og\.png/,
+    /https:\/\/masaohana\.github\.io\/doyu-guide\/og\.png/,
   );
   assert.match(html, /summary_large_image/);
 });
