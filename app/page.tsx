@@ -116,11 +116,11 @@ export default function Home() {
             <span aria-hidden="true">●</span> 3分でつかむ、同友会入門
           </p>
           <h1>
-            経営者が、
-            <br />
-            <span>ひとりで悩まない</span>
-            <br />
-            場所。
+            <span className="hero-title-line">経営者が、</span>
+            <span className="hero-title-line hero-title-emphasis">
+              ひとりで悩まない
+            </span>
+            <span className="hero-title-line">場所。</span>
           </h1>
           <p className="hero-lead">
             正解を教わるのではなく、経験を持ち寄り、
@@ -203,9 +203,9 @@ export default function Home() {
         <div className="section-heading">
           <p className="section-number">01 / 同友会とは</p>
           <h2>
-            教わる会、ではなく。
-            <br />
-            <span>学びあう会。</span>
+            <span className="title-line">教わる会、</span>
+            <span className="title-line">ではなく。</span>
+            <span className="title-line title-accent">学び合う会。</span>
           </h2>
         </div>
         <div className="about-copy">
@@ -240,9 +240,8 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-number">02 / 3つの目的</p>
             <h2>
-              目指すのは、
-              <br />
-              <span>この3つ。</span>
+              <span className="title-line">目指すのは、</span>
+              <span className="title-line title-accent">この3つ。</span>
             </h2>
           </div>
           <p className="section-lead">
@@ -295,11 +294,9 @@ export default function Home() {
         <div className="values-title">
           <p className="section-number">03 / 大切にする精神</p>
           <h2>
-            自分から。
-            <br />
-            みんなで。
-            <br />
-            力を合わせて。
+            <span className="title-line">自分から。</span>
+            <span className="title-line">みんなで。</span>
+            <span className="title-line">力を合わせて。</span>
           </h2>
           <p>
             「自主・民主・連帯」は、会の運営だけでなく、人間を尊重する会社づくりにも通じる考え方です。
@@ -325,9 +322,10 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-number">04 / 例会での学び</p>
             <h2>
-              聴いて終わらない。
-              <br />
-              <span>会社で、やってみる。</span>
+              <span className="title-line">聴いて終わらない。</span>
+              <span className="title-line title-accent">
+                会社で、やってみる。
+              </span>
             </h2>
           </div>
           <p className="section-lead">
@@ -357,10 +355,13 @@ export default function Home() {
         <div className="teacher-quote section-shell">
           <p>同友会の学びを、ひとことで言うなら。</p>
           <blockquote>
-            <span>“</span>
-            会員一人ひとりが、
-            <br />
-            <strong>先生であり、生徒である。</strong>
+            <span className="quote-mark">“</span>
+            <span className="quote-line">会員一人ひとりが、</span>
+            <strong>
+              <span className="phrase">先生であり、</span>
+              <wbr />
+              <span className="phrase">生徒である。</span>
+            </strong>
           </blockquote>
           <p className="quote-note">
             自分の経験を惜しまず話し、
@@ -378,9 +379,8 @@ export default function Home() {
         <div>
           <p className="section-number">05 / 目指す未来</p>
           <h2>
-            会社がよくなる。
-            <br />
-            地域もよくなる。
+            <span className="title-line">会社がよくなる。</span>
+            <span className="title-line">地域もよくなる。</span>
           </h2>
           <p>
             中小企業は、地域の雇用や暮らしを支える存在です。だから自社だけでなく、地域や社会とともに歩む。経営者同士の学びを、よりよい会社と地域の未来につなげていきます。
@@ -393,7 +393,8 @@ export default function Home() {
         <div className="faq-heading">
           <p className="section-number">06 / よくある疑問</p>
           <h2>
-            つまり、どんな会？
+            <span className="title-line">つまり、</span>
+            <span className="title-line">どんな会？</span>
           </h2>
           <p>気になるところを、タップしてみてください。</p>
         </div>

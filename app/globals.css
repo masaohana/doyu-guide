@@ -33,6 +33,18 @@ body {
   overflow-x: hidden;
 }
 
+p,
+h1,
+h2,
+h3,
+blockquote,
+summary strong {
+  line-break: strict;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+  word-break: auto-phrase;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -210,19 +222,26 @@ summary {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(3.1rem, 5.8vw, 6rem);
+  font-size: clamp(3.1rem, 4.25vw, 4.55rem);
   font-weight: 950;
   letter-spacing: -0.075em;
   line-height: 1.13;
 }
 
-.hero h1 span {
-  position: relative;
-  z-index: 0;
+.hero-title-line,
+.title-line {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
   white-space: nowrap;
 }
 
-.hero h1 span::after {
+.hero-title-emphasis {
+  position: relative;
+  z-index: 0;
+}
+
+.hero-title-emphasis::after {
   position: absolute;
   z-index: -1;
   right: -6px;
@@ -487,9 +506,13 @@ summary {
   line-height: 1.25;
 }
 
-.section-heading h2 span,
+.section-heading h2 .title-accent,
 .next h2 span {
   color: var(--blue);
+}
+
+.values-title h2 {
+  font-size: clamp(2.4rem, 4vw, 4rem);
 }
 
 .about-copy {
@@ -732,7 +755,7 @@ summary {
 
 .value-row {
   display: grid;
-  grid-template-columns: 42px 118px 126px 1fr;
+  grid-template-columns: 42px 138px 126px 1fr;
   align-items: center;
   gap: 20px;
   border-bottom: 2px solid var(--ink);
@@ -752,15 +775,19 @@ summary {
 }
 
 .value-name h3 {
+  flex: 0 0 auto;
   margin: 0;
   font-size: 2.6rem;
   font-weight: 950;
   letter-spacing: -0.08em;
+  white-space: nowrap;
 }
 
 .value-name small {
+  flex: 0 0 auto;
   font-size: 0.6rem;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .value-row > strong {
@@ -787,8 +814,12 @@ summary {
   padding-block: 130px 0;
 }
 
-.activity .section-heading h2 span {
+.activity .section-heading h2 .title-accent {
   color: var(--yellow);
+}
+
+.activity .section-heading h2 {
+  font-size: clamp(2.25rem, 3.5vw, 3.6rem);
 }
 
 .steps {
@@ -885,13 +916,13 @@ summary {
 .teacher-quote blockquote {
   position: relative;
   margin: 0;
-  font-size: clamp(2.3rem, 4.3vw, 4.8rem);
+  font-size: clamp(2.3rem, 3.3vw, 3.65rem);
   font-weight: 850;
   letter-spacing: -0.07em;
   line-height: 1.45;
 }
 
-.teacher-quote blockquote > span {
+.teacher-quote blockquote > .quote-mark {
   position: absolute;
   top: -80px;
   left: -35px;
@@ -901,9 +932,20 @@ summary {
   line-height: 1;
 }
 
+.teacher-quote .quote-line {
+  display: block;
+  white-space: nowrap;
+}
+
 .teacher-quote blockquote strong {
+  display: block;
   color: var(--yellow);
   font-weight: 950;
+}
+
+.teacher-quote blockquote strong .phrase {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .quote-note {
@@ -1213,7 +1255,7 @@ footer {
   font-weight: 800;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1180px) {
   .desktop-nav {
     display: none;
   }
@@ -1243,6 +1285,16 @@ footer {
   .faq,
   .region {
     grid-template-columns: 1fr;
+  }
+
+  .purpose-intro,
+  .activity-heading {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .section-lead {
+    margin: 0;
   }
 
   .about-copy {
@@ -1345,7 +1397,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: clamp(2.85rem, 13vw, 4.5rem);
+    font-size: clamp(2.35rem, 11.5vw, 4.25rem);
     letter-spacing: -0.09em;
   }
 
@@ -1552,6 +1604,10 @@ footer {
     padding-top: 90px;
   }
 
+  .activity .section-heading h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
   .steps {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -1582,7 +1638,7 @@ footer {
     font-size: 2.45rem;
   }
 
-  .teacher-quote blockquote > span {
+  .teacher-quote blockquote > .quote-mark {
     top: -58px;
     left: -8px;
     font-size: 7rem;
