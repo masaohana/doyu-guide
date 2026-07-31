@@ -92,6 +92,14 @@ test("renders the detailed guide with progressive learning sections", async () =
   assert.match(html, /人を生かす経営/);
   assert.match(html, /組織づくり/);
   assert.match(html, /理念の歩み/);
+  assert.match(html, /冊子から、さらに詳しく/);
+  assert.match(html, /同友会理念を読み解く/);
+  assert.match(html, /例会での学び方を深める/);
+  assert.match(html, /資料編から原点を確かめる/);
+  assert.match(html, /冊子 4–9頁/);
+  assert.match(html, /冊子 41–74頁/);
+  assert.match(html, /<details class="booklet-item" open="">/);
+  assert.match(html, /正式な表現や資料の全文は、冊子の該当頁/);
   assert.match(
     html,
     /class="guide-heading-line">理念は、<\/span>/,
@@ -118,7 +126,7 @@ test("renders the detailed guide with progressive learning sections", async () =
       /<h2 class="guide-heading(?: guide-heading--wide)?">([\s\S]*?)<\/h2>/g,
     ),
   ];
-  assert.equal(guideHeadings.length, 7);
+  assert.equal(guideHeadings.length, 8);
   for (const [, heading] of guideHeadings) {
     assert.doesNotMatch(heading, /<br\s*\/?>/);
   }

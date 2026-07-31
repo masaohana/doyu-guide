@@ -2049,7 +2049,7 @@ footer {
   z-index: 10;
   display: grid;
   width: min(1180px, calc(100% - 48px));
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   overflow: hidden;
   border: 2px solid var(--ink);
   border-radius: 18px;
@@ -2648,6 +2648,182 @@ footer {
   line-height: 1.9;
 }
 
+.booklet-guide {
+  border-bottom: 2px solid var(--ink);
+  background-color: #fff1a9;
+  background-image:
+    linear-gradient(rgba(21, 36, 58, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 36, 58, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+  padding-block: 140px;
+}
+
+.booklet-head h2 .guide-heading-accent {
+  color: var(--blue);
+}
+
+.booklet-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 78px;
+}
+
+.booklet-item {
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.booklet-item summary {
+  display: grid;
+  min-height: 134px;
+  grid-template-columns: 56px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: 22px;
+  padding: 24px 28px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.booklet-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.booklet-index {
+  color: var(--blue);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.booklet-summary-copy {
+  display: block;
+  min-width: 0;
+}
+
+.booklet-summary-copy small {
+  display: block;
+  color: var(--blue);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.booklet-summary-copy strong {
+  display: block;
+  margin-top: 3px;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  line-height: 1.45;
+}
+
+.booklet-summary-copy > span {
+  display: block;
+  max-width: 820px;
+  margin-top: 7px;
+  color: rgba(21, 36, 58, 0.76);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.booklet-item summary i {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+  font-size: 1.35rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  transition: transform 160ms ease;
+}
+
+.booklet-item[open] summary {
+  border-bottom: 2px solid var(--ink);
+  background: #f4f6ff;
+}
+
+.booklet-item[open] summary i {
+  transform: rotate(45deg);
+}
+
+.booklet-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  gap: 48px;
+  padding: 34px 28px 38px 106px;
+}
+
+.booklet-detail h3 {
+  margin: 0 0 18px;
+  font-size: 0.82rem;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+}
+
+.booklet-detail ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.booklet-detail li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.booklet-detail li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+  content: "";
+}
+
+.booklet-detail aside {
+  align-self: start;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--yellow);
+  padding: 22px;
+}
+
+.booklet-detail aside small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+}
+
+.booklet-detail aside p {
+  margin: 12px 0 0;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.9;
+}
+
+.booklet-note {
+  max-width: 900px;
+  margin: 30px 0 0;
+  font-size: 0.68rem;
+  font-weight: 650;
+  line-height: 1.9;
+}
+
 .guide-final {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -2748,6 +2924,10 @@ footer {
 
   .organization-grid article:last-child {
     grid-column: 1 / -1;
+  }
+
+  .booklet-detail {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2865,7 +3045,8 @@ footer {
   .guide-section,
   .movement-guide,
   .management-guide,
-  .history-guide {
+  .history-guide,
+  .booklet-guide {
     padding-block: 90px;
   }
 
@@ -3028,6 +3209,49 @@ footer {
 
   .history-timeline h3 {
     font-size: 1rem;
+  }
+
+  .booklet-list {
+    margin-top: 50px;
+  }
+
+  .booklet-item {
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+
+  .booklet-item summary {
+    min-height: 118px;
+    grid-template-columns: 34px minmax(0, 1fr) 36px;
+    gap: 12px;
+    padding: 18px 14px;
+  }
+
+  .booklet-summary-copy strong {
+    font-size: 1.08rem;
+  }
+
+  .booklet-summary-copy > span {
+    margin-top: 5px;
+    font-size: 0.72rem;
+    line-height: 1.75;
+  }
+
+  .booklet-item summary i {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .booklet-detail {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 26px 16px 28px 60px;
+  }
+
+  .booklet-detail li,
+  .booklet-detail aside p {
+    font-size: 0.78rem;
   }
 
   .guide-final {

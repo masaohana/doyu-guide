@@ -119,6 +119,114 @@ const history = [
   },
 ];
 
+const bookletChapters = [
+  {
+    number: "01",
+    pages: "冊子 4–9頁",
+    title: "同友会理念を読み解く",
+    lead:
+      "三つの目的、自主・民主・連帯、地域と共に歩む姿勢を、理念形成の歴史とあわせてたどります。",
+    topics: [
+      "「よい会社」「よい経営者」「よい経営環境」が、互いに結びついている理由",
+      "自主・民主・連帯の精神が、会の運営と企業経営にどう表れるか",
+      "「国民や地域と共に歩む中小企業」という立場",
+      "1947年から1990年までの理念形成と、21世紀に向けた総合実践",
+    ],
+    question:
+      "三つの目的を、自社の経営課題の中でどう結び直せるでしょうか。",
+  },
+  {
+    number: "02",
+    pages: "冊子 10–15頁",
+    title: "運動と企業経営をつなぐ",
+    lead:
+      "同友会運動と企業経営を「不離一体」ととらえ、学びを実践へ移す考え方を深めます。",
+    topics: [
+      "長期的な課題へ取り組む「運動」と、具体的な「活動」の違い",
+      "労使見解を根底に置く「人を生かす経営」",
+      "学びと実践のサイクルを回し、成果と教訓を会へ返す流れ",
+      "中小企業憲章・条例、エネルギーシフト、環境経営への取り組み",
+    ],
+    question:
+      "学びを自社で実践し、その成果や教訓を仲間へ返す循環ができているでしょうか。",
+  },
+  {
+    number: "03",
+    pages: "冊子 16–19頁",
+    title: "例会での学び方を深める",
+    lead:
+      "月例会を中心に、経営体験の報告、グループ討論、実践までの学び方を具体的に扱います。",
+    topics: [
+      "活動方針を柱にした会運営と、経営体験を中心に据えた例会づくり",
+      "報告者を問題提起者ととらえ、自分の経験に重ねて聴くグループ討論",
+      "方法をまねるだけでなく、その人の生き方や経営姿勢から学ぶこと",
+      "学んだことの実践、全国行事、会員としてのマナー、個人情報・著作権の保護",
+    ],
+    question:
+      "報告を「いい話」で終わらせず、自社で試す一歩へ変えられるでしょうか。",
+  },
+  {
+    number: "04",
+    pages: "冊子 19–25頁",
+    title: "温かく、強い組織をつくる",
+    lead:
+      "会員を増やす意味から、役員会・支部・委員会などの役割まで、組織づくりを掘り下げます。",
+    topics: [
+      "47都道府県に広がった歩みと、会員を増やすことの意味",
+      "計画的な会員増強、新会員の参加、退会を減らす取り組み",
+      "質の高い学び、温かな関係、会員主体など、組織づくりの五つの視点",
+      "役員会、支部・地区、小グループ、専門委員会、企業間ネットワーク、青年・女性組織",
+    ],
+    question:
+      "参加するだけの「お客様」ではなく、会をつくる主体として何ができるでしょうか。",
+  },
+  {
+    number: "05",
+    pages: "冊子 25–30頁",
+    title: "会の内外と、社会へつながる",
+    lead:
+      "広報、経済交流、財政、行政や金融機関との関係、事務局の役割を一つの流れで見ます。",
+    topics: [
+      "会内外へ理念と実践を伝える広報活動",
+      "信頼と自主性を土台にした会員間の経済交流",
+      "活動を継続するための健全な財政",
+      "政党・行政・金融機関・他団体との関係と、会員と共に学び育ちあう事務局",
+    ],
+    question:
+      "自社だけの課題を、地域や社会の課題として誰と考えられるでしょうか。",
+  },
+  {
+    number: "06",
+    pages: "冊子 31–40頁",
+    title: "全国運動と中同協の役割を知る",
+    lead:
+      "各地同友会の自主性を尊重しながら、全国の成果と教訓をつなぐ中同協の役割を整理します。",
+    topics: [
+      "全国のセンターとして理念を深め、各地の成果と教訓を還元する役割",
+      "各地同友会との関係、連携強化、情報・調査研究、危機管理",
+      "総会、幹事会、委員会、地域ブロックなどの組織",
+      "全国行事、役員の役割、事務局の働き",
+    ],
+    question:
+      "地域で得た学びを全国へ、全国の知恵を地域へ、どう循環させられるでしょうか。",
+  },
+  {
+    number: "07",
+    pages: "冊子 41–74頁",
+    title: "資料編から原点を確かめる",
+    lead:
+      "理念や労使見解、政策提言、組織運営の原資料を、調べたいテーマから探せます。",
+    topics: [
+      "同友会理念・同友会の生い立ちと展望（41頁）、労使関係の見解（46頁）",
+      "21世紀型中小企業（50頁）、中小企業憲章草案（54頁）、日本経済ビジョン（56頁）",
+      "同友会運動の将来展望（58頁）、財政と会計処理（59頁）、共同求人（63頁）",
+      "教育力のある企業（64頁）、個人情報保護（65頁）、インターネット活用（66頁）、ハラスメント防止（67頁）、会則ほか（68頁以降）",
+    ],
+    question:
+      "解説で全体像をつかんだ後、どの原資料へ戻って確かめたいでしょうか。",
+  },
+];
+
 export default function GuidePage() {
   return (
     <main className="guide-page">
@@ -132,6 +240,7 @@ export default function GuidePage() {
           <a href="#meeting">例会</a>
           <a href="#management">経営</a>
           <a href="#history">歴史</a>
+          <a href="#booklet">冊子</a>
         </nav>
         <Link className="header-button" href="/">
           入門へ戻る <span aria-hidden="true">↖</span>
@@ -191,6 +300,9 @@ export default function GuidePage() {
         </a>
         <a href="#history">
           <span>05</span> 組織と歴史
+        </a>
+        <a href="#booklet">
+          <span>06</span> 冊子から探す
         </a>
       </nav>
 
@@ -472,6 +584,63 @@ export default function GuidePage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="booklet-guide" id="booklet">
+        <div className="section-shell">
+          <div className="guide-section-head booklet-head">
+            <div>
+              <p className="section-number">07 / 冊子から、さらに詳しく</p>
+              <h2 className="guide-heading">
+                <span className="guide-heading-line">知りたい内容を、</span>
+                <span className="guide-heading-line guide-heading-accent">
+                  冊子の頁から探す。
+                </span>
+              </h2>
+            </div>
+            <p>
+              『同友会運動の発展のために 第4次改訂版』の内容を、七つの入口に整理しました。気になる項目を開くと、扱われている内容と該当頁を確認できます。
+            </p>
+          </div>
+
+          <div className="booklet-list">
+            {bookletChapters.map((chapter, index) => (
+              <details
+                className="booklet-item"
+                key={chapter.number}
+                open={index === 0}
+              >
+                <summary>
+                  <span className="booklet-index">{chapter.number}</span>
+                  <span className="booklet-summary-copy">
+                    <small>{chapter.pages}</small>
+                    <strong>{chapter.title}</strong>
+                    <span>{chapter.lead}</span>
+                  </span>
+                  <i aria-hidden="true">＋</i>
+                </summary>
+                <div className="booklet-detail">
+                  <div>
+                    <h3>この範囲で扱うこと</h3>
+                    <ul>
+                      {chapter.topics.map((topic) => (
+                        <li key={topic}>{topic}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <aside>
+                    <small>READING QUESTION</small>
+                    <p>{chapter.question}</p>
+                  </aside>
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <p className="booklet-note">
+            ※頁番号は冊子に印刷された番号です。ここでは内容を要約して紹介しています。正式な表現や資料の全文は、冊子の該当頁でご確認ください。
+          </p>
         </div>
       </section>
 
