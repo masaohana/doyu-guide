@@ -229,7 +229,7 @@ const bookletChapters = [
 
 export default function GuidePage() {
   return (
-    <main className="guide-page">
+    <main className="guide-page" id="top">
       <header className="site-header guide-header">
         <Link className="logo" href="/" aria-label="DOYU! 入門ページへ戻る">
           DOYU<span>!</span>
@@ -239,6 +239,7 @@ export default function GuidePage() {
           <a href="#movement">運動</a>
           <a href="#meeting">例会</a>
           <a href="#management">経営</a>
+          <a href="#organization">組織</a>
           <a href="#history">歴史</a>
           <a href="#booklet">冊子</a>
         </nav>
@@ -262,7 +263,7 @@ export default function GuidePage() {
             <br />
             理念を学び、経営に重ね、仲間と実践する会です。
             <br />
-            その考え方を、5つのテーマから掘り下げます。
+            その考え方を、6つのテーマから掘り下げます。
           </p>
         </div>
         <div className="layer-stack" aria-label="理念、活動、経営の3つの層">
@@ -298,11 +299,14 @@ export default function GuidePage() {
         <a href="#management">
           <span>04</span> 人を生かす経営
         </a>
+        <a href="#organization">
+          <span>05</span> 組織づくり
+        </a>
         <a href="#history">
-          <span>05</span> 組織と歴史
+          <span>06</span> 理念の歩み
         </a>
         <a href="#booklet">
-          <span>06</span> 冊子から探す
+          <span>07</span> 冊子から探す
         </a>
       </nav>
 
@@ -527,7 +531,10 @@ export default function GuidePage() {
         </div>
       </section>
 
-      <section className="guide-section organization-guide section-shell">
+      <section
+        className="guide-section organization-guide section-shell"
+        id="organization"
+      >
         <div className="guide-section-head">
           <div>
             <p className="section-number">05 / 組織づくり</p>

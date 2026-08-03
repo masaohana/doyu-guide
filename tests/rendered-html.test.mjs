@@ -58,6 +58,7 @@ test("renders the Doyukai introduction page", async () => {
     html,
     /class="deep-dive-heading-line deep-dive-heading-accent">「なぜ、そうする？」へ。<\/span>/,
   );
+  assert.match(html, /同友会の考え方を、6つのテーマで掘り下げます。/);
 
   const deepDiveHeading = html.match(
     /<h2 class="deep-dive-heading">([\s\S]*?)<\/h2>/,
@@ -92,6 +93,16 @@ test("renders the detailed guide with progressive learning sections", async () =
   assert.match(html, /人を生かす経営/);
   assert.match(html, /組織づくり/);
   assert.match(html, /理念の歩み/);
+  assert.match(html, /class="guide-page" id="top"/);
+  assert.match(html, /href="#organization">組織<\/a>/);
+  assert.match(
+    html,
+    /class="guide-section organization-guide section-shell" id="organization"/,
+  );
+  assert.match(html, /<span>05<\/span> 組織づくり/);
+  assert.match(html, /<span>06<\/span> 理念の歩み/);
+  assert.match(html, /<span>07<\/span> 冊子から探す/);
+  assert.match(html, /その考え方を、6つのテーマから掘り下げます。/);
   assert.match(html, /冊子から、さらに詳しく/);
   assert.match(html, /同友会理念を読み解く/);
   assert.match(html, /例会での学び方を深める/);

@@ -1909,6 +1909,12 @@ footer {
   transform: translateX(-12px);
 }
 
+.deep-dive-topics span:nth-child(6) {
+  background: var(--purple);
+  color: var(--white);
+  transform: translateX(14px);
+}
+
 .guide-page {
   background: var(--cream);
 }
@@ -2049,7 +2055,7 @@ footer {
   z-index: 10;
   display: grid;
   width: min(1180px, calc(100% - 48px));
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   overflow: hidden;
   border: 2px solid var(--ink);
   border-radius: 18px;
@@ -2491,18 +2497,20 @@ footer {
 .triad-center {
   display: inline-flex;
   width: max-content;
-  min-height: 50px;
+  min-height: 70px;
   grid-column: 1 / -1;
   align-items: center;
   justify-self: center;
   border: 3px solid var(--ink);
   border-radius: 999px;
   background: var(--yellow);
-  box-shadow: 5px 5px 0 var(--ink);
+  box-shadow: 7px 7px 0 var(--ink);
   color: var(--ink);
-  padding: 9px 28px;
-  font-size: 0.85rem;
+  padding: 12px 48px;
+  font-size: clamp(1.25rem, 2.1vw, 1.65rem);
   font-weight: 950;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
 }
 
 .management-flow {
@@ -3157,7 +3165,10 @@ footer {
 
   .triad-center {
     display: inline-flex;
+    min-height: 60px;
     grid-column: auto;
+    padding: 10px 32px;
+    font-size: 1.2rem;
   }
 
   .management-flow {

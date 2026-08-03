@@ -436,7 +436,7 @@ export default function Home() {
           <p>
             理念の成り立ち、例会での学び方、人を生かす経営、組織づくり。
             <br />
-            同友会の考え方を、5つのテーマで掘り下げます。
+            同友会の考え方を、6つのテーマで掘り下げます。
           </p>
           <Link className="primary-button" href="/guide">
             深掘りガイドを読む <span aria-hidden="true">→</span>
@@ -447,6 +447,7 @@ export default function Home() {
           <span>運動</span>
           <span>例会</span>
           <span>経営</span>
+          <span>組織</span>
           <span>歴史</span>
         </div>
       </section>
