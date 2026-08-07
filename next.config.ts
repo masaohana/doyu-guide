@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
-const repositoryName =
-  process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "doyu-guide";
-const basePath = isGitHubPages ? `/${repositoryName}` : "";
+const basePath = "";
 
 const nextConfig: NextConfig = isGitHubPages
   ? {

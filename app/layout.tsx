@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const publicSiteUrl = "https://masaohana.github.io/doyu-guide";
+const publicSiteUrl = "https://doyu.ohanahome.jp";
 const socialImageUrl = `${publicSiteUrl}/og.png`;
 const faviconUrl = `${publicSiteUrl}/favicon.png`;
 
