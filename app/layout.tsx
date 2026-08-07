@@ -3,12 +3,17 @@ import "./globals.css";
 
 const publicSiteUrl = "https://masaohana.github.io/doyu-guide";
 const socialImageUrl = `${publicSiteUrl}/og.png`;
+const faviconUrl = `${publicSiteUrl}/favicon.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicSiteUrl),
   title: "DOYU!｜3分でわかる中小企業家同友会",
   description:
     "同友会ってどんな会？3つの目的、自主・民主・連帯、例会での学びを、初めての方にもわかりやすく紹介します。",
+  icons: {
+    icon: [{ url: faviconUrl, sizes: "64x64", type: "image/png" }],
+    shortcut: faviconUrl,
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",

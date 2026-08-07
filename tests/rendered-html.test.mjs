@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { access } from "node:fs/promises";
 import test from "node:test";
 
 async function render(path = "/") {
@@ -30,6 +31,7 @@ test("renders the Doyukai introduction page", async () => {
   const html = await response.text();
   assert.match(html, /<html lang="ja">/);
   assert.match(html, /DOYU!｜3分でわかる中小企業家同友会/);
+  assert.match(html, /masaohana\.github\.io\/doyu-guide\/favicon\.png/);
   assert.match(html, /経営者が、/);
   assert.match(html, /ひとりで悩まない/);
   assert.match(html, /hero-title-line hero-title-emphasis/);
@@ -68,6 +70,7 @@ test("renders the Doyukai introduction page", async () => {
 
   assert.match(html, /中同協公式サイト/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/);
+  await access(new URL("../public/favicon.png", import.meta.url));
 });
 
 test("keeps official external links safe and explicit", async () => {
